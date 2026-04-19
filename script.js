@@ -12,6 +12,17 @@ const db = firebase.firestore();
 const auth = firebase.auth();
 
 let cart = [];
+function login(){ ... }
+
+function addItem(){ ... }
+
+function loadMenu(){ ... }
+
+function addToCart(){ ... }
+
+function renderCart(){ ... }
+
+function placeOrder(){ ... }
 
 /* 🔐 LOGIN */
 function login(){
