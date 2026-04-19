@@ -54,24 +54,80 @@ function addItem() {
 }
 
 // ================= LOAD MENU =================
-function loadMenu() {
-  db.collection("menu").onSnapshot(snapshot => {
-    const menuDiv = document.getElementById("menu");
-    menuDiv.innerHTML = "";
-
-    snapshot.forEach(doc => {
-      let d = doc.data();
-
-      menuDiv.innerHTML += `
-        <div class="card">
-          <img src="${d.img}" width="120">
-          <h3>${d.name}</h3>
-          <p>₹${d.price}</p>
-          <button onclick="addToCart('${d.name}', ${d.price})">Add</button>
-        </div>
-      `;
-    });
-  });
+{
+  name: "Chicken Biryani",
+  price: 180,
+  img: "https://source.unsplash.com/400x300/?chicken-biryani"
+},
+{
+  name: "Mutton Biryani",
+  price: 250,
+  img: "https://source.unsplash.com/400x300/?mutton-biryani"
+},
+{
+  name: "Veg Biryani",
+  price: 120,
+  img: "https://source.unsplash.com/400x300/?veg-biryani"
+}
+{
+  name: "Egg Fried Rice",
+  price: 130,
+  img: "https://source.unsplash.com/400x300/?egg-fried-rice"
+},
+{
+  name: "Chicken Fried Rice",
+  price: 160,
+  img: "https://source.unsplash.com/400x300/?chicken-fried-rice"
+},
+{
+  name: "Veg Fried Rice",
+  price: 100,
+  img: "https://source.unsplash.com/400x300/?fried-rice"
+}
+{
+  name: "Plain Dosa",
+  price: 50,
+  img: "https://source.unsplash.com/400x300/?dosa"
+},
+{
+  name: "Masala Dosa",
+  price: 80,
+  img: "https://source.unsplash.com/400x300/?masala-dosa"
+},
+{
+  name: "Paneer Dosa",
+  price: 100,
+  img: "https://source.unsplash.com/400x300/?paneer-dosa"
+}
+{
+  name: "Chicken Curry",
+  price: 170,
+  img: "https://source.unsplash.com/400x300/?chicken-curry"
+},
+{
+  name: "Butter Chicken",
+  price: 220,
+  img: "https://source.unsplash.com/400x300/?butter-chicken"
+},
+{
+  name: "Chicken 65",
+  price: 150,
+  img: "https://source.unsplash.com/400x300/?chicken-65"
+}
+{
+  name: "Tea",
+  price: 10,
+  img: "https://source.unsplash.com/400x300/?tea"
+},
+{
+  name: "Coffee",
+  price: 20,
+  img: "https://source.unsplash.com/400x300/?coffee"
+},
+{
+  name: "Masala Tea",
+  price: 15,
+  img: "https://source.unsplash.com/400x300/?masala-tea"
 }
 
 // ================= CART =================
