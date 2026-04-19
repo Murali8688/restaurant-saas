@@ -8,12 +8,10 @@ const firebaseConfig = {
   appId: "1:157974385682:web:a84999c511b274c0a474cb"
 };
 
-// INIT FIREBASE
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const auth = firebase.auth();
 
-// ================= GLOBAL VARIABLES =================
 let cart = [];
 
 // ================= LOGIN =================
@@ -27,11 +25,9 @@ function login() {
       document.getElementById("app").style.display = "block";
       loadMenu();
     })
-    .catch(err => {
-      alert(err.message);
-      console.log(err);
-    });
+    .catch(err => alert(err.message));
 }
+
 
 // ================= ADD FOOD =================
 function addItem() {
