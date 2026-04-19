@@ -1,8 +1,10 @@
-// 🔥 FIREBASE CONFIG (replace with your Firebase project)
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID"
+  apiKey: "AIzaSyB1iDZ10RbPVfznSAAk-FLrF7UBZvS1l_8",
+  authDomain: "foodpro-6fe25.firebaseapp.com",
+  projectId: "foodpro-6fe25",
+  storageBucket: "foodpro-6fe25.appspot.com",
+  messagingSenderId: "157974385682",
+  appId: "1:157974385682:web:a84999c511b274c0a474cb"
 };
 
 firebase.initializeApp(firebaseConfig);
