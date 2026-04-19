@@ -1,71 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FoodExpress SaaS</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodExpress SaaS</title>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <!-- Firebase SDK (compat version - WORKING FOR HTML) -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth-compat.js"></script>
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth-compat.js"></script>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    🍽️ FoodExpress SaaS
-  </header>
+<header>🍽️ FoodExpress SaaS</header>
 
-  <!-- LOGIN PAGE -->
-  <div class="box" id="loginBox">
-    <h2>Admin Login</h2>
+<!-- LOGIN -->
+<div class="box" id="loginBox">
+  <h2>Admin Login</h2>
 
-    <input id="email" type="email" placeholder="Email">
-    <input id="password" type="password" placeholder="Password">
+  <input id="email" type="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
 
-    <button type="button" onclick="login()">Login</button>
-  </div>
+  <button onclick="login()">Login</button>
+</div>
 
-  <!-- MAIN APP -->
-  <div class="container" id="app" style="display:none">
+<!-- APP -->
+<div class="container" id="app" style="display:none">
 
-    <h2>🍛 Add Food (Admin Panel)</h2>
+  <h2>🍛 Add Food</h2>
 
-    <input id="foodName" placeholder="Food Name">
-    <input id="foodPrice" placeholder="Price">
-    <input id="foodImg" placeholder="Image URL">
+  <input id="foodName" placeholder="Food Name">
+  <input id="foodPrice" placeholder="Price">
+  <input id="foodImg" placeholder="Image URL">
 
-    <button onclick="addItem()">Add Item</button>
+  <button onclick="addItem()">Add Item</button>
 
-    <hr>
+  <hr>
 
-    <h2>🍽️ Menu</h2>
-    <div id="menu"></div>
+  <h2>🍽️ Menu</h2>
+  <div id="menu"></div>
 
-    <hr>
+  <hr>
 
-    <h2>🛒 Cart</h2>
-    <div id="cart"></div>
+  <h2>🛒 Cart</h2>
+  <div id="cart"></div>
 
-    <button onclick="placeOrder()">📲 Place Order (WhatsApp)</button>
+  <button onclick="placeOrder()">📲 Place Order</button>
 
-  </div>
+</div>
 
-  <!-- ENTER KEY LOGIN SUPPORT -->
-  <script>
-    document.addEventListener("keydown", function (e) {
-      if (e.key === "Enter") {
-        login();
-      }
-    });
-  </script>
-
-  <!-- YOUR JS FILE -->
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
