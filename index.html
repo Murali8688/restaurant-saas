@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FoodExpress SaaS</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Firebase -->
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.4/firebase-auth-compat.js"></script>
+</head>
+
+<body>
+
+<header>🍽️ FoodExpress SaaS</header>
+
+<!-- LOGIN -->
+<div class="box" id="loginBox">
+  <h2>Admin Login</h2>
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- APP -->
+<div class="container" id="app" style="display:none">
+
+  <h2>Add Food</h2>
+  <input id="foodName" placeholder="Food Name">
+  <input id="foodPrice" placeholder="Price">
+  <input id="foodImg" placeholder="Image URL">
+  <button onclick="addItem()">Add Item</button>
+
+  <h2>Menu</h2>
+  <div id="menu"></div>
+
+  <h2>Cart</h2>
+  <div id="cart"></div>
+
+  <button onclick="placeOrder()">Place Order (WhatsApp)</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
